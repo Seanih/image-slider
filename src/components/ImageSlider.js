@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import { SliderData } from './SliderData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = () => {
 	const [currentPic, setCurrentPic] = useState(0);
-	const length = slides.length;
+	const picsInArray = SliderData.length;
 
 	const nextSlide = () => {
-		setCurrentPic(currentPic === length - 1 ? 0 : currentPic + 1);
+		setCurrentPic(currentPic === picsInArray - 1 ? 0 : currentPic + 1);
 		console.log(currentPic);
 	};
 
 	const prevSlide = () => {
-		setCurrentPic(currentPic === 0 ? length - 1 : currentPic - 1);
+		setCurrentPic(currentPic === 0 ? picsInArray - 1 : currentPic - 1);
 		console.log(currentPic);
 	};
 
-	if (!Array.isArray(slides) || length <= 0) {
+	if (!Array.isArray(SliderData) || picsInArray <= 0) {
 		return null;
 	}
 

@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+.container {
+	background: #000;
+}
+
 .slider {
 	position: relative;
 	height: 100vh;
@@ -29,6 +33,10 @@
 	user-select: none;
 }
 
+.right-arrow:hover {
+	color: white;
+}
+
 .left-arrow {
 	position: absolute;
 	top: 50%;
@@ -40,8 +48,12 @@
 	user-select: none;
 }
 
+.left-arrow:hover {
+	color: white;
+}
+
 .slide {
-	opacity: 0;
+	opacity: 0.5;
 	transition-duration: 1s ease;
 }
 
